@@ -44,5 +44,5 @@ SESSION_DRIVER=file
 php artisan key:generate
 php artisan migrate --seed
 php artisan serve
-
+php artisan test
 I have added a postman collection file on root you can also test apis for that
