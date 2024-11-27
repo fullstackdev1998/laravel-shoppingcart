@@ -20,7 +20,7 @@ adding items to the cart, updating cart quantities, viewing the cart, and remove
 - **PHP**: >= 8.3
 - **Laravel**: >= 11.x
 - **Composer**: Installed
-- - **Database**: MySQL
+- **Database**: MySQL
 
 ---
 
@@ -29,5 +29,20 @@ adding items to the cart, updating cart quantities, viewing the cart, and remove
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/laravel-mini-cart.git
-cd laravel-mini-cart
+git clone git@github.com:fullstackdev1998/laravel-shoppingcart.git
+cd laravel-shoppingcart
+composer install
+cp .env.example .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password
+SESSION_DRIVER=file
+
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+
+I have added a postman collection file on root you can also test apis for that

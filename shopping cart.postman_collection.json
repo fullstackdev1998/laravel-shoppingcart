@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "ae84fff2-35a2-472b-8a46-b8fe327d3268",
+		"name": "shopping cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12483607",
+		"_collection_link": "https://blue-sunset-731320.postman.co/workspace/PIPA-Developer~3fda5c3d-0b6d-4e0e-830d-1e1b6afcc8ad/collection/12483607-ae84fff2-35a2-472b-8a46-b8fe327d3268?action=share&source=collection_link&creator=12483607"
+	},
+	"item": [
+		{
+			"name": "all-products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://laraveltestapp.test/api/products",
+					"protocol": "http",
+					"host": [
+						"laraveltestapp",
+						"test"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all-carts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://laraveltestapp.test/api/cart",
+					"protocol": "http",
+					"host": [
+						"laraveltestapp",
+						"test"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-to-cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laraveltestapp.test/api/cart",
+					"protocol": "http",
+					"host": [
+						"laraveltestapp",
+						"test"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laraveltestapp.test/api/cart/1",
+					"protocol": "http",
+					"host": [
+						"laraveltestapp",
+						"test"
+					],
+					"path": [
+						"api",
+						"cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
